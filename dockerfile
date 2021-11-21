@@ -12,6 +12,8 @@ WORKDIR /usr/app/src
 
 #to COPY the remote file at working directory in container
 COPY test.py /home/test.py
+RUN echo $(ls -ltr /home/)
+RUN echo $(ls -ltr)
 CMD ["ls -ltr "]
 CMD ["ls -ltr /home/"]
 # Now the structure looks like this '/usr/app/src/test.py'
