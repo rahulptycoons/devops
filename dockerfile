@@ -12,7 +12,7 @@ WORKDIR /home/
 CMD ["pwd "]
 RUN echo $(ls -ltr)
 #to COPY the remote file at working directory in container
-COPY test.py /home/test.py
+COPY .test.py /home/test.py
 RUN echo $(ls -ltr /home/)
 RUN echo $(ls -ltr)
 CMD ["ls -ltr "]
