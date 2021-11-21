@@ -8,11 +8,12 @@ LABEL Maintainer="roushan.me17"
 
 # Any working direcrtory can be chosen as per choice like '/' or '/home' etc
 # i have chosen /usr/app/src
-WORKDIR /home/
 CMD ["pwd "]
+RUN pwd
+CMD ["ls -ltr "]
 RUN echo $(ls -ltr)
 #to COPY the remote file at working directory in container
-COPY . test.py /home/test.py
+COPY test.py /home/
 RUN echo $(ls -ltr /home/)
 RUN echo $(ls -ltr)
 CMD ["ls -ltr "]
